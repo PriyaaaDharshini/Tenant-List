@@ -43,7 +43,12 @@ export default function TenantList() {
             bordered={true}
             loading={loadState}
             dataSource={data}
-            pagination={{ hideOnSinglePage: true, size: "small" }}
+            pagination={{
+              hideOnSinglePage: true,
+              size: "small",
+              pageSizeOptions: [20],
+              defaultPageSize: 20,
+            }}
           >
             <Table.Column<User>
               align="center"
